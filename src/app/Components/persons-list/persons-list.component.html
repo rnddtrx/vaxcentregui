@@ -1,0 +1,19 @@
+<form [formGroup]="searchForm" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="lastname">Last Name:</label>
+      <input type="text" class="form-control" id="lastname" formControlName="lastname">
+    </div>
+    <div class="form-group">
+      <label for="firstname">First Name:</label>
+      <input type="text" class="form-control" id="firstname" formControlName="firstname">
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let person of persons">
+      {{ person.lastname }}, {{ person.firstname }}
+    </li>
+  </ul>
+  
+  
