@@ -3,12 +3,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { PersonDto } from '../Model/person-dto';
 
+import { Url } from '../url.constants';
+
 @Injectable({
   providedIn: 'root'
 })
 export class PersonService {
 
-  private apiUrl = 'http://localhost:8080/api/persons/';
+  private apiUrl = Url.URL+'persons/';
 
   constructor(private http: HttpClient) { }
 
